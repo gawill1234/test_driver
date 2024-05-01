@@ -4,6 +4,17 @@ A driver to run tests.
 Questions: gawill1234@gmail.com
 Put "github: test_driver" in the subject line.
 
+Build (for now):
+```
+gcc -c -DMACBOOK *.c
+gcc -o gtd *.o
+
+or, if not a macbook,
+gcc -c *.c
+gcc -o gtd *.o
+```
+The difference above.  Linux will use sys/vfs.h.   The macbook will use sys/mount.h.
+
 More information coming.
 
 This is a test driver.  It will take a list of tests and run them.  Then save the results for
