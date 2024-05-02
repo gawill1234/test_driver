@@ -41,13 +41,15 @@ linux:
 	for item in $(SRC); do \
 		$(CC) -c -D__LINUX__ $${item}; \
 	done; \
-	$(CC) -o gtd $(OBJ)
+	$(CC) -o gtd $(OBJ); \
+	rm -f *.o
 
 mac:
 	for item in $(SRC); do \
 		$(CC) -D__MACBOOK__ -c $${item}; \
 	done; \
-	$(CC) -o gtd $(OBJ)
+	$(CC) -o gtd $(OBJ); \
+        rm -f *.o
 
 
 clean:
