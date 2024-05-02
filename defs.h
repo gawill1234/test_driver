@@ -6,10 +6,12 @@
 #include <ctype.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#ifndef MACBOOK
-#include <sys/vfs.h>
-#else
+#ifdef __MACBOOK__
+#include <sys/param.h>
 #include <sys/mount.h>
+#endif
+#ifdef __LINUX__ 
+#include <sys/vfs.h>
 #endif
 #include <fcntl.h>
 #include <dirent.h>
