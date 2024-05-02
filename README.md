@@ -30,6 +30,10 @@ name and if it encounters a directory of that name, it will copy it to its run  
 this is in the GTD_* directory.  If you look in fm001, you will see all of the test files plus the
 saved output.  The actual final test results are in the RESULTS file.
 
+Full disclosure.  The sample fmxxx tests are from the FORTRAN Compiler Validation Suite (FCVS) available
+from NiST (if you want all of it for fortran testing, it's free).  The .f (FORTRAN) files have been slightly
+modified to have a proper exit status.
+
 There is a test list (goofy.gtd) as an example.  Each line in the file should be one test.
 
 You will need to set a TEST_ROOT environment variable.
