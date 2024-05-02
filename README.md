@@ -2,7 +2,7 @@
 A driver to run tests.
 Sorry, this is a little disorganized at the moment. Working on it ...
 
-## What is it good for
+### What is it good for
 What is is used for.  Compiler/interpreter testing, operating system testing,
 network testing, search engine testing, database testing, UI and api testing,
 ...  All of those types of tests have been run using this driver.  It makes
@@ -17,18 +17,18 @@ tests as well.
 The beauty of this driver is that it is completely separate from the tests 
 themselves.
 
-## github languages
+### github languages
 The "Languages" section of the github page says there is a lot of FORTRAN in here.  
 There is not.  At least not as driver code.
 There are 6 small FORTRAN files in the bin examples.  The project itself is
 written entirely in C.  So, more like 98% C, 1% FORTRAN and 1% make.
 
-## Questions: gawill1234@gmail.com
+### Questions: gawill1234@gmail.com
 ```
 Put "github: test_driver" in the subject line.
 ```
 
-## Build (for now):
+### Build (for now):
 ```
 gcc -c -D__MACBOOK__ *.c
 gcc -o gtd *.o
@@ -48,7 +48,7 @@ More information coming.
 This is a test driver.  It will take a list of tests and run them.  Then save the results for
 later review.
 
-## Test layout
+### Test layout
 The tests are easy.  It can be ANY executable provided that the executable has an exit status.
 The default is exit 0 (zero) means pass.  Anything else is a fail.  It can be changed.
 For multi-file tests, the best way to do things it so put all of the files in a directory with the
@@ -58,21 +58,21 @@ name and if it encounters a directory of that name, it will copy it to its run  
 this is in the GTD_* directory.  If you look in fm001, you will see all of the test files plus the
 saved output.  The actual final test results are in the RESULTS file.
 
-## FCVS
+### FCVS
 Full disclosure.  The sample fmxxx tests are from the FORTRAN Compiler Validation Suite (FCVS) available
 from NiST (if you want all of it for fortran testing, it's free).  The .f (FORTRAN) files have been slightly
 modified to have a proper exit status.
 
-## Compare/golden file tests
+### Compare/golden file tests
 For the moment, the missing test types are those that use compare/golden files.  It is doable, I just haven't
 put an example in yet.  For those unfamiliar, this type of test generates a result file that must be 
 compared to a known good result.  It's not hard to do, though you need a way to either remove the changeable
 data(dates, timestamps, etc) or pull and save the bits you wish to compare to the good data.
 
-## Example test list
+### Example test list
 There is a test list (goofy.gtd) as an example.  Each line in the file should be one test.
 
-## Environment settings (basic):
+### Environment settings (basic):
 You will need to set a TEST_ROOT environment variable.
 The executable test files will need to be in your PATH.
 ```
@@ -81,14 +81,14 @@ export PATH=$PATH:$TEST_ROOT/bin
 ```
 That should be enough for it to run.
 
-## Sample run command (a common one):
+### Sample run command (a common one):
 ```
 ./gtd -k -i ./goofy.gtd
 ```
 The -k option will cause the run to keep ALL test runs.  Without -k, it will only keep  the failed
 runs.
 
-## Full usage/options list
+### Full usage/options list
 ```
 Usage:  gtd -i <input_file> -o <results_file> -C <number>
             -T <default_timeout> -t <run_time> -r <repeat_cnt>
@@ -138,7 +138,7 @@ Generated Directories:
                           unless -k is specified
 ```
 
-## goofy.gtd
+### goofy.gtd
 You can name the test file anything as long as the suffix is ".gtd".
 The file specifies a list of tests to run, mostly.  However, you can do things specific
 to each test within the file.  There are a number of key words that make that possible.
@@ -149,7 +149,7 @@ A default file looks like the example:
 ./c.tst
 ./987.tst
 ```
-## Test key workds
+### Test key words
 The keys are as follows:
 ```
 TIME or RUN:  TIME=10, limits the test run time to 10 seconds
