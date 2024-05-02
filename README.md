@@ -2,6 +2,16 @@
 A driver to run tests.
 Sorry, this is a little disorganized at the moment. Working on it ...
 
+What is is used for.  Compiler/interpreter testing, operating system testing,
+network testing, search engine testing, database testing, UI and api testing,
+...  All of those types of tests have been run using this driver.  It makes
+it faster and more convenient.  At least, once it is setup.  Any application
+that can use self contained tests would benefit for the added convenience and
+performance of using a test driver.
+
+The beauty of this driver is that it is completely separate from the tests 
+themselves.
+
 The "Languages" section says there is a lot of FORTRAN in here.  There is not.
 There are 6 small FORTRAN files in the bin examples.  The project itself is
 written entirely in C.  So, more like 98% C, 1% FORTRAN and 1% make.
@@ -130,6 +140,10 @@ EXIT or  PASS: PASS=9, sets  the passing exit  value  to 9, rather than the 0 (z
 LOOP: LOOP=3, causes the test to be run  3 times  in a  row.
 SUITE: SUITE=blah, labels the test as being part of the "blah" suite.
 SESS: SESS=Y, causes the test to run in its own operating session
+MCON: MCON=x, where x is an integer.  Set how many tests should start and run together.
+SCON: SCON=x, where x is an integer.  Set how many copies of the same test should run together.
+SCON and MCON are more like setting.  The number will stick until MCON/SCON is encountered
+   again with a new number; like 1 to return to default setting.
 ```
 Examples:
 ```
