@@ -7,12 +7,16 @@ Put "github: test_driver" in the subject line.
 
 Build (for now):
 ```
-gcc -c -DMACBOOK *.c
+gcc -c -D__MACBOOK__ *.c
 gcc -o gtd *.o
+OR
+make mac
 
 or, if not a macbook,
-gcc -c *.c
+gcc -c -D__LINUX__ *.c
 gcc -o gtd *.o
+OR
+make linux
 ```
 The difference above.  Linux will use sys/vfs.h.   The macbook will use sys/mount.h.
 
