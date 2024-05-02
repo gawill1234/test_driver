@@ -124,7 +124,7 @@ A default file looks like the example:
 The keys are as follows:
 ```
 TIME or RUN:  TIME=10, limits the test run time to 10 seconds
-MBS: Forces the test to be run standalone.  If you specify the multiple tests can be run,
+MBS: MBS=Y, Forces the test to be run standalone.  If you specify the multiple tests can be run,
      this will cause all other tests to pause until it has completed.
 EXIT or  PASS: PASS=9, sets  the passing exit  value  to 9, rather than the 0 (zero) default
 LOOP: LOOP=3, causes the test to be run  3 times  in a  row.
@@ -134,7 +134,7 @@ SESS: SESS=Y, causes the test to run in its own operating session
 Examples:
 ```
 ./a.tst
-(MBS)./b.tst
-(MBS,SESS=Y)./c.tst
+(MBS=Y)./b.tst
+(MBS=Y,SESS=Y)./c.tst
 (RUN=10)./987.tst
 ```
