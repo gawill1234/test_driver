@@ -101,3 +101,32 @@ Generated Directories:
                           its contents are destroyed for passing tests
                           unless -k is specified
 ```
+
+goofy.gtd
+You can name the test file anything as long as the suffix is ".gtd".
+The file specifies a list of tests to run, mostly.  However, you can do things specific
+to each test within the file.  There are a number of key words that make that possible.
+A default file looks like the example:
+```
+./a.tst
+./b.tst
+./c.tst
+./987.tst
+```
+The keys are as follows:
+```
+TIME or RUN:  TIME=10, limits the test run time to 10 seconds
+MBS: Forces the test to be run standalone.  If you specify the multiple tests can be run,
+     this will cause all other tests to pause until it has completed.
+EXIT or  PASS: PASS=9, sets  the passing exit  value  to 9, rather than the 0 (zero) default
+LOOP: LOOP=3, causes the test to be run  3 times  in a  row.
+SUITE: SUITE=blah, labels the test as being part of the "blah" suite.
+SESS: SESS=Y, causes the test to run in its own operating session
+```
+Examples:
+```
+./a.tst
+(MBS)./b.tst
+(MBS,SESS=Y)./c.tst
+(RUN=10)./987.tst
+```
