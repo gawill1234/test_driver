@@ -9,6 +9,10 @@ it faster and more convenient.  At least, once it is setup.  Any application
 that can use self contained tests would benefit for the added convenience and
 performance of using a test driver.
 
+You can also use it for different types of testing.  Setting the test concurrency
+high can aid with load/stress testing.  And you can run self-contained performance
+tests as well.
+
 The beauty of this driver is that it is completely separate from the tests 
 themselves.
 
@@ -51,6 +55,11 @@ saved output.  The actual final test results are in the RESULTS file.
 Full disclosure.  The sample fmxxx tests are from the FORTRAN Compiler Validation Suite (FCVS) available
 from NiST (if you want all of it for fortran testing, it's free).  The .f (FORTRAN) files have been slightly
 modified to have a proper exit status.
+
+For the moment, the missing test types are those that use compare/golden files.  It is doable, I just haven't
+put an example in yet.  For those unfamiliar, this type of test generates a result file that must be 
+compared to a known good result.  It's not hard to do, though you need a way to either remove the changeable
+data(dates, timestamps, etc) or pull and save the bits you wish to compare to the good data.
 
 There is a test list (goofy.gtd) as an example.  Each line in the file should be one test.
 
