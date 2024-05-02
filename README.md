@@ -27,6 +27,10 @@ written entirely in C.  So, more like 98% C, 1% FORTRAN and 1% make.
 ```
 Put "github: test_driver" in the subject line.
 ```
+If you want or need 1 on 1 assistance with setting things up, I'm happy to help.
+We can schedule a teams meeting or something similar (zoom, slack).  Just give me
+a little notice by sending an email.  I can also assist with various types of test
+configuration.
 
 ### Build (for now):
 ```
