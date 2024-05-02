@@ -1,5 +1,6 @@
 # test_driver
 A driver to run tests.
+Sorry, this is a little disorganized at the moment. Working on it ...
 
 Questions: gawill1234@gmail.com
 Put "github: test_driver" in the subject line.
@@ -22,8 +23,14 @@ later review.
 
 The tests are easy.  It can be ANY executable provided that the executable has an exit status.
 The default is exit 0 (zero) means pass.  Anything else is a fail.  It can be changed.
+For multi-file tests, the best way to do things it so put all of the files in a directory with the
+same name as the test.  For example, for test fm006.tst, there is a directory named fm006 which
+contains all of the files for that test.  The driver will use the test prefix (fm006) as the full
+name and if it encounters a directory of that name, it will copy it to its run  area.  A sample  of
+this is in the GTD_* directory.  If you look in fm001, you will see all of the test files plus the
+saved output.  The actual final test results are in the RESULTS file.
 
-There is a one item test list (goofy.gtd) as an example.  Each line in the file should be one test.
+There is a test list (goofy.gtd) as an example.  Each line in the file should be one test.
 
 You will need to set a TEST_ROOT environment variable.
 The executable test files will need to be in your PATH.
