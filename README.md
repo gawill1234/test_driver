@@ -2,6 +2,10 @@
 A driver to run tests.
 Sorry, this is a little disorganized at the moment. Working on it ...
 
+The "Languages" section says there is a lot of FORTRAN in here.  There is not.
+There are 6 small FORTRAN files in the bin examples.  The project itself is
+written entirely in C.  So, more like 98% C, 1% FORTRAN and 1% make.
+
 Questions: gawill1234@gmail.com
 Put "github: test_driver" in the subject line.
 
