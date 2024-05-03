@@ -2,6 +2,11 @@
 A driver to run tests.
 Sorry, this is a little disorganized at the moment. Working on it ...
 
+### Keywords
+testing, test driver, automation, test automation, functional testing,
+stress testing, load testing, system testing, negative testing,
+performance testing
+
 ### What is it good for
 What is is used for.  Compiler/interpreter testing, operating system testing,
 network testing, search engine testing, database testing, UI and api testing,
